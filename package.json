@@ -1,0 +1,14 @@
+{
+  "name": "manifestation",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "concurrently \"dotnet watch run --project src/Manifestation.API/Manifestation.API.csproj\" \"cd src/ClientApp && npm install && ng serve --port 4200 --proxy-config proxy.conf.json\"",
+    "build:frontend": "cd src/ClientApp && npm install && npm run build",
+    "build:backend": "dotnet build",
+    "build": "npm run build:frontend && npm run build:backend"
+  },
+  "devDependencies": {
+    "concurrently": ""
+  }
+}
